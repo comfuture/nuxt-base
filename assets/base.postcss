@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ui-canvas-bg: #fff;
+  [data-theme="dark"] {
+    --ui-canvas-bg: #272829;
+  }
+}
+
+@layer utilities {
+  .prose {
+    h1,
+    h2,
+    h3 {
+      @apply mt-3 mb-2;
+    }
+    h1 {
+      @apply text-3xl;
+    }
+    h2 {
+      @apply text-2xl;
+    }
+    h3 {
+      @apply text-xl;
+    }
+
+    @apply leading-relaxed;
+  }
+
+  .canvas {
+    @apply bg-white/80 dark:bg-white/10;
+    /* dark:bg-[color:#272829]; */
+    @apply border-gray-200 dark:border-none;
+    @apply text-[color:canvastext];
+  }
+
+  /* .bordered {
+    @apply border border-gray-200 dark:border-gray-900;
+  } */
+
+  .elevated {
+    @apply shadow-lg;
+  }
+}
